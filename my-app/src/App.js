@@ -4,9 +4,8 @@ import configureStore from './store/configureStore';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
+export default class App extends Component {
   render() {
-    console.log('HELLO WORLD', this);
     return (
       <div className="App">
         <header className="App-header">
@@ -21,4 +20,3 @@ class App extends Component {
   }
 }
 
-export default App;
