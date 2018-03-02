@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import itemsReducer from './items';
 
 const rootReducer = combineReducers({
-  // mapData: mapDataReducer,       <- example of using redux to map reducer.
+  items: itemsReducer,
 });
 
 export default rootReducer;

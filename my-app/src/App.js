@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
-import logo from './logo.svg';
-import './App.css';
+import Router from './router/router';
+// import './App.scss';
+
+const store = configureStore({});
 
 export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcme to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Provider store={store}>
+        <Router/>
+      </Provider>
     );
   }
 }

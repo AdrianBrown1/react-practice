@@ -1,28 +1,11 @@
-.App {
-  text-align: center;
-}
+.header {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  background-color: #FF0042; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.header__text {
+  font-size: 2rem;
   color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }

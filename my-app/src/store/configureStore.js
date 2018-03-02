@@ -5,7 +5,6 @@ import loggingMiddleware from './middleware/logging';
 
 export default function configureStore(initialState) {
   let middleware;
-
   if (process.env.NODE_ENV !== 'production') {
     middleware = applyMiddleware(thunk, loggingMiddleware);
   } else {

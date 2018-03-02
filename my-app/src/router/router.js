@@ -1,22 +1,20 @@
-//TO DO: set up router , router-container & stack-navigator
-import React, { Component } from 'react';
-import { addNavigationHelpers } from 'react-navigation';
-import PropTypes from 'prop-types';
-import StackRouter from './stack-navigator';
+import React, { Fragment } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import { home, additem } from '../constants/routes';
+import dashboard from '../containers/dash-board-container/dash-board-container';
+import addItemDashboard from '../containers/add-item-dashboard-container/add-item-dashboard-container';
 
-export default class RouterWithNav extends Component {
-  static propTypes = {
-    nav: PropTypes.object,
-    dispatch: PropTypes.func,
-  }
-  render() {
-    return (
-      <StackRouter
-        navigation={addNavigationHelpers({
-          dispatch: this.props.dispatch,
-          state: this.props.nav,
-        })}
-      />
-    );
-  }
-}
+export default () => (
+  <Router>
+    <Fragment>
+      <Switch>
+        <Route exact path={home} component={dashboard}/>
+        <Route exact path={additem} component={addItemDashboard}/>
+      </Switch>
+    </Fragment>
+  </Router>
+)
