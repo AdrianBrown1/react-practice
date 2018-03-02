@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 export default class ListItem extends Component {
   _createItem(event) {
+    const { items } = this.props;
     event.preventDefault();
     const item = {
       title: this.title.value,
@@ -12,12 +13,13 @@ export default class ListItem extends Component {
       vendor: this.vendor.value,
     }
     //TODO: add item to state.
-    // this.props.addItem(item);
+    this.props.addItem(item, items);
     this.props.history.push('/');
     this.addItemForm.reset();
   }
 
   render () {
+    console.log('propys',this.props);
     return (
      <form
       className="form-container"

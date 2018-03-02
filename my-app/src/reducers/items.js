@@ -1,4 +1,4 @@
-// import { UPDATE_CURRENT_BENCH } from '../constants/action-types';
+import { ADD_ITEM } from '../constants/action-types';
 const item = {
   title: 'YEEZY BOOST 350 V2',
   price: 220,
@@ -34,12 +34,12 @@ const initialState = {
 // This is where all state changing must be done.
 export default function (state = initialState, action) {
   switch (action.type) {
-    // case UPDATE_CURRENT_BENCH: {
-    //   return {
-    //     ...state,
-    //     ...action.payload,
-    //   };
-    // }
+    case ADD_ITEM: {
+      return {
+        ...state,
+        ...action.payload,
+      };
+    }
     default: {
       return state;
     }

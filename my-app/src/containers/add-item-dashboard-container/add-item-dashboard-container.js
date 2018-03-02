@@ -1,5 +1,6 @@
 import AddItemDashboard from '../../screens/add-item-dashboard/add-item-dashboard';
 import { connect } from 'react-redux';
+import { addItem } from '../../actions/actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -7,12 +8,9 @@ const mapStateToProps = (state) => {
   };
 };
 const mapDispatchToProps = (dispatch) => ({
-  // fetchRestaurants: (params) => {
-  //   dispatch(fetchRestaurants(params));
-  // },
-  // fetchDistance: (params) => {
-  //   dispatch(fetchDistance(params));
-  // },
+  addItem: (item, items) => {
+    dispatch(addItem(item, items));
+  },
 });
 
 export default connect(

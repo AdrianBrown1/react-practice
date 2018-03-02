@@ -7,16 +7,19 @@ export default class AddItemDashboard extends Component {
 
   static propTypes = {
     items: PropTypes.object,
+    addItem: PropTypes.func,
   }
+
 
   render() {
     const { items } = this.props.items;
-    const { history } = this.props;
+    const { history, addItem } = this.props;
+    console.log(this.props);
     return (
       <div className="dash-board__container">
         <div className="dash-board__items">
           <SecondaryHeader/>
-          <AddItemForm history={history}/>
+          <AddItemForm history={history} addItem={addItem} items={items}/>
         </div>
       </div>
     );

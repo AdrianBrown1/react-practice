@@ -1,1 +1,1 @@
-// export const NAVIGATE = 'NAVIGATE';
+export const ADD_ITEM = 'ADD_ITEM';
