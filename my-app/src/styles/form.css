@@ -1,0 +1,21 @@
+.form-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2em; }
+
+.form-content {
+  display: flex;
+  flex-direction: column; }
+
+.form-content__item {
+  padding-bottom: 1em; }
+  .form-content__item:last-child {
+    padding-bottom: 0; }
+
+.form-text__input {
+  padding: 0.5em;
+  background: none;
+  outline: inherit;
+  border: 0.4px solid grey; }
