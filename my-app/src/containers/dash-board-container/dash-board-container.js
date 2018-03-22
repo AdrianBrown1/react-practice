@@ -1,18 +1,18 @@
 import ItemList from '../../screens/dash-board/dash-board';
 import { connect } from 'react-redux';
+import { fetchWeather } from '../../actions/actions';
+// import weather from '../../reducers/weather';
 
 const mapStateToProps = (state) => {
   return {
-   items: state.items,
+   weather: state.weather,
   };
 };
+
 const mapDispatchToProps = (dispatch) => ({
-  // fetchRestaurants: (params) => {
-  //   dispatch(fetchRestaurants(params));
-  // },
-  // fetchDistance: (params) => {
-  //   dispatch(fetchDistance(params));
-  // },
+  fetchWeather: (params) => {
+    dispatch(fetchWeather(params));
+  },
 });
 
 export default connect(

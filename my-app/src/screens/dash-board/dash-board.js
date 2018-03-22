@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Header from '../../components/header/header';
-import ItemList from '../../components/item-list/item-list';
+import Form from '../../components/form/form';
 
 export default class Dashboard extends Component {
 
   static propTypes = {
-    items: PropTypes.object,
+    // items: PropTypes.object,
+    fetchWeather: PropTypes.func,
+    weather: PropTypes.object,
   }
 
   render() {
-    const { items } = this.props.items;
-    const { history } = this.props;
+    console.log('FUCK THIS', this.props); 
+    const { history, fetchWeather, weather } = this.props;
+    // if(!weather) return null;
+    // console.log('WEATHER', weather.todaysWeather);
     return (
       <div className="dash-board__container">
-        <div className="dash-board__items">
-          <Header/>
-          <ItemList items={items} history={history}/>
-        </div>
+        <Form fetchWeather={fetchWeather}/>
       </div>
     );
   }
