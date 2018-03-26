@@ -29,7 +29,7 @@ export const fetchCurrentWeatherSuccess = (todaysWeather) => ({
 
 export const fetchWeather = (param) => (dispatch) => {
   const url = BASE_URL + param + API_KEY;
-  dispatch(fetchWeatherRequest(url));
+  // dispatch(fetchWeatherRequest(url));
   fetch(url)
     .then((res) => {
       return res.json();
