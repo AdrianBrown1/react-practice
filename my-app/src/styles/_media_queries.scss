@@ -4,21 +4,14 @@ $max-width-container: 90rem;
 $timing: 0.25s;
 $modal-content-max-width: 45em;
 
-
 $mqs: (
-  xsmall-mobile: 321 / 16,
   small-mobile: 460 / 16,
-  almost-mobile: 560 / 16,
+  almost-mobile: 570 / 16,
   mobile: 767 / 16,
   tablet: 1024 / 16,
   small-desktop: 1280 / 16,
   medium-desktop: 1440 / 16,
   desktop: 1500 / 16,
-);
-
-$constant-mqs: (
-  smallest-height: 864 / 16,
-  smallest-width: 784 / 16,
 );
 
 @mixin smaller-than($size) {
@@ -49,13 +42,19 @@ $constant-mqs: (
     @content;
   }
 }
-
+//TODO: figure out why $width is not working.
 @mixin larger-than-em($size) {
-  $width: #{1.0 * $size * $base-font-size * 1px};
-  @media (min-width: $width) {
+  // $width: #{1.0 * $size * $base-font-size * 1px};
+  @media (min-width: 767px) {
     @content;
   }
 }
+// @mixin larger-than-em($size) {
+//   $width: #{1.0 * $size * $base-font-size * 1px};
+//   @media (min-width: $width) {
+//     @content;
+//   }
+// }
 
 @mixin between-em($min, $max) {
   $minwidth: #{1.0 * $min * $base-font-size * 1px};
@@ -66,7 +65,6 @@ $constant-mqs: (
 }
 
 // Vertical
-
 @mixin shorter-than($size) {
   $height: #{map-get($constant-mqs, $size)};
   @include shorter-than-em($height) {
@@ -96,4 +94,3 @@ $constant-mqs: (
     @content;
   }
 }
-
