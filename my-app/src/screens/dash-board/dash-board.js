@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Form from '../../components/form/form';
+import Weather from '../../components/weather/weather';
 
 export default class Dashboard extends Component {
 
@@ -13,11 +14,10 @@ export default class Dashboard extends Component {
   render() {
     console.log('FUCK THIS', this.props); 
     const { history, fetchWeather, weather } = this.props;
-    // if(!weather) return null;
-    // console.log('WEATHER', weather.todaysWeather);
     return (
       <div className="dash-board__container">
-        <Form fetchWeather={fetchWeather}/>
+        <Form fetchWeather={fetchWeather} weather={weather}/>
+        <Weather weather={weather}/>
       </div>
     );
   }
