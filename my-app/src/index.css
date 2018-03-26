@@ -6,18 +6,6 @@
   flex-direction: column;
   background-color: #d1b5e8; }
 
-.header {
-  position: relative;
-  display: flex;
-  width: 100vw;
-  justify-content: center;
-  background-color: #FF0042; }
-
-.header__text {
-  font-size: 2rem;
-  color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; }
-
 .list-of-items__container {
   position: relative;
   display: flex;
@@ -99,7 +87,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2em; }
+  margin: 2em;
+  overflow: none; }
+  @media (min-width: 767px) {
+    .form-container {
+      overflow: hidden; } }
 
 .form-text__input {
   max-width: 15rem;
@@ -108,18 +100,70 @@
   font-size: 1rem;
   background: none;
   outline: inherit;
-  color: gray;
+  color: white;
   border: 0.03125rem solid grey;
+  border-radius: 2rem;
   opacity: 0.6;
   background-color: darkgrey; }
   .form-text__input::-webkit-input-placeholder {
     color: gray; }
 
 .form-text__title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
-  margin: 6rem 2rem; }
+  min-width: 10rem;
+  text-align: center;
+  margin: 3rem 1rem; }
+  @media (min-width: 767px) {
+    .form-text__title {
+      font-size: 2.5rem; } }
+
+.weather-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem 4rem; }
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  justify-content: space-around; }
+  @media (min-width: 767px) {
+    .weather {
+      flex-direction: row;
+      text-align: left;
+      max-width: 35rem; } }
+
+.weather-col {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+  @media (min-width: 767px) {
+    .weather-col {
+      text-align: left; } }
+
+.weather-description {
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 1rem; }
+
+.weather-text {
+  color: white;
+  font-size: 2.25rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  opacity: 0.6; }
+  @media (min-width: 767px) {
+    .weather-text {
+      margin-top: 0; } }
 
 html, body {
   margin: 0; }

@@ -1,0 +1,51 @@
+.weather-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem 4rem;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  justify-content: space-around; 
+
+  @include larger-than(mobile) {
+    flex-direction: row;
+    text-align: left;
+    max-width: 35rem;
+  }
+}
+.weather-col {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @include larger-than(mobile) {
+    text-align: left;
+  }
+}
+
+.weather-description {
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.weather-text {
+  color: white;
+  font-size: 2.25rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  opacity: 0.6;
+
+  @include larger-than(mobile) {
+    margin-top: 0;
+  }
+}
