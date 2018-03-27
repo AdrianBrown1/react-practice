@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 export default class ListItem extends Component {
   
   _getLocalWeather(event) {
-    console.log('HELLOOOOOOOO',this.title.value);
     const { fetchWeather } = this.props;
     event.preventDefault();
     //TODO: need to get users info **DONE
@@ -15,13 +14,11 @@ export default class ListItem extends Component {
   _getLocalWeatherInfo () {
     const { weather } = this.props
     if(!weather) return null;
-    console.log('HELLO WORLD', weather.todaysWeather);
   }
 
  _getFormItem = () => {
   const { weather } = this.props
   if (!weather) {
-    console.log('HEllO WORLD');
     return (
       <form
        className="form-container"
@@ -29,7 +26,7 @@ export default class ListItem extends Component {
        ref={(input) => this.addItemForm = input}
       >      
         <input type='text'
-          placeholder='Where the f*ck are you?'
+          placeholder='Your f*ck*ng city'
           className='form-text__input'
           onSubmit={(e) => this._getLocalWeather(e)}
           ref={(input) => this.title = input}

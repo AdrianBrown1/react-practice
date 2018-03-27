@@ -12,7 +12,6 @@ export default class Dashboard extends Component {
   }
 
   render() {
-    console.log('FUCK THIS', this.props); 
     const { history, fetchWeather, weather } = this.props;
     return (
       <div className="dash-board__container">
