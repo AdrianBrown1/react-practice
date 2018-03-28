@@ -4,7 +4,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import { home, additem } from '../constants/routes';
+import { home } from '../constants/routes';
 import dashboard from '../containers/dash-board-container/dash-board-container';
 
 export default () => (
