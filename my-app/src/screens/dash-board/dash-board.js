@@ -6,16 +6,17 @@ import Weather from '../../components/weather/weather';
 export default class Dashboard extends Component {
 
   static propTypes = {
-    // items: PropTypes.object,
     fetchWeather: PropTypes.func,
+    resetWeatherState: PropTypes.func,
     weather: PropTypes.object,
   }
 
   render() {
-    const { history, fetchWeather, weather } = this.props;
+    const { history, fetchWeather, weather, resetWeatherState } = this.props;
+
     return (
       <div className="dash-board__container">
-        <Form fetchWeather={fetchWeather} weather={weather}/>
+        <Form fetchWeather={fetchWeather} weather={weather} resetWeatherState={resetWeatherState}/>
         <Weather weather={weather}/>
       </div>
     );

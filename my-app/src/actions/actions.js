@@ -29,20 +29,28 @@ export const fetchCurrentWeatherSuccess = (todaysWeather) => ({
 
 export const fetchWeather = (param) => (dispatch) => {
   const url = BASE_URL + param + API_KEY;
-  // dispatch(fetchWeatherRequest(url));
+  console.log('*** URL ***', url);
+
   fetch(url)
     .then((res) => {
       return res.json();
     })
     .then((data) => {
-      const todaysWeather = {
-        description: data.weather[0].description,
-        currentTemp: data.main.temp,
-        maxTemp: data.main.temp_max,
-        minTemp: data.main.temp_min,
-        humidity: data.main.humidity,
+      if (data) {
+        const todaysWeather = {
+          description: data.weather[0].description,
+          currentTemp: data.main.temp,
+          maxTemp: data.main.temp_max,
+          minTemp: data.main.temp_min,
+          humidity: data.main.humidity,
+        }
+        dispatch(fetchCurrentWeatherSuccess(todaysWeather));
       }
-      dispatch(fetchCurrentWeatherSuccess(todaysWeather));
     })
     .catch((err) => { dispatch(fetchWeatherError(err)); });
 };
+
+export const resetWeatherState = () => (dispatch) => {
+  const error = null;
+  dispatch(fetchWeatherError(error));
+}

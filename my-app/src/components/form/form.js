@@ -4,10 +4,9 @@ import React, { Component } from 'react';
 export default class ListItem extends Component {
   
   _getLocalWeather(event) {
-    const { fetchWeather } = this.props;
+    const { fetchWeather, weather, resetWeatherState } = this.props;
+    resetWeatherState();
     event.preventDefault();
-    //TODO: need to get users info **DONE
-    // passit to function to download local weather and update state. ** DONE
     fetchWeather(this.title.value);
   }
   
@@ -28,6 +27,7 @@ export default class ListItem extends Component {
         <input type='text'
           placeholder='Your f*ck*ng city'
           className='form-text__input'
+          type='numbrt'
           onSubmit={(e) => this._getLocalWeather(e)}
           ref={(input) => this.title = input}
         />
