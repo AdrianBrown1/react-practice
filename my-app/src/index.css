@@ -143,7 +143,8 @@
   text-align: center; }
   @media (min-width: 767px) {
     .weather-col {
-      text-align: left; } }
+      text-align: left;
+      max-width: 12rem; } }
 
 .weather-description {
   display: flex;

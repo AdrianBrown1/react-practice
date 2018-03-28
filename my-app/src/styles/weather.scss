@@ -24,6 +24,7 @@
   text-align: center;
   @include larger-than(mobile) {
     text-align: left;
+    max-width: 12rem;
   }
 }
 

@@ -12,7 +12,7 @@ export default class Dashboard extends Component {
   }
 
   render() {
-    const { history, fetchWeather, weather, resetWeatherState } = this.props;
+    const { fetchWeather, weather, resetWeatherState } = this.props;
 
     return (
       <div className="dash-board__container">

@@ -20,7 +20,7 @@ const seventies = [
 
 const eithtiesAndUp = [
   'pretty fuking hot', "you're gonna sweat", 'hot af', 'sweaty pits', 
-  ''
+  'grade your shades'
 ]
 
 export const getHighTempQuote = (temp) => {

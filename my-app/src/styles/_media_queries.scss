@@ -49,12 +49,6 @@ $mqs: (
     @content;
   }
 }
-// @mixin larger-than-em($size) {
-//   $width: #{1.0 * $size * $base-font-size * 1px};
-//   @media (min-width: $width) {
-//     @content;
-//   }
-// }
 
 @mixin between-em($min, $max) {
   $minwidth: #{1.0 * $min * $base-font-size * 1px};
